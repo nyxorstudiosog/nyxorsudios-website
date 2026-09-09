@@ -41,6 +41,22 @@
     padding: 0 24px;
   }
 
+  /* ---------- TOP BAR ---------- */
+  .topbar{
+    background: var(--accent-dim);
+    border-bottom: 1px solid var(--line);
+    text-align: center;
+    padding: 8px 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--text-dim);
+  }
+  .topbar a{
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .topbar a:hover{ text-decoration: underline; }
+
   /* ---------- NAV ---------- */
   nav{
     border-bottom: 1px solid var(--line);
@@ -61,7 +77,11 @@
     font-weight:700;
     font-size: 1.05rem;
     letter-spacing:-0.01em;
+    display:flex;
+    align-items:center;
+    gap:10px;
   }
+  .logo-icon{ flex-shrink:0; }
   .logo span{ color: var(--accent); }
   nav a.cta{
     border:1px solid var(--accent);
@@ -105,6 +125,24 @@
   }
 
   .hero-actions{ display:flex; gap:14px; flex-wrap:wrap; }
+
+  .email-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top: 22px;
+    padding: 10px 16px;
+    border: 1px dashed var(--line);
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+  }
+  .email-badge a{
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .email-badge a:hover{ text-decoration: underline; }
 
   .btn-primary{
     background: var(--accent);
@@ -297,7 +335,13 @@
 
 <nav>
   <div class="wrap">
-    <div class="logo">Nyxor<span>sudios</span></div>
+    <div class="logo">
+      <svg class="logo-icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="28" height="28" rx="7" stroke="#5eead4" stroke-width="1.6"/>
+        <path d="M9 21V9L21 21V9" stroke="#5eead4" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Nyxor<span>sudios</span>
+    </div>
     <a href="#contact" class="cta">Get in touch</a>
   </div>
 </nav>
@@ -311,6 +355,7 @@
       <a href="#contact" class="btn-primary">Start a project</a>
       <a href="#work" class="btn-secondary">See how it works</a>
     </div>
+    <div class="email-badge">📩 Or email directly — <a href="mailto:nyxorstudiosweb@gmail.com">nyxorstudiosweb@gmail.com</a></div>
   </div>
 </header>
 
@@ -405,7 +450,7 @@
 <footer>
   <div class="wrap">
     <div>© 2026 Nyxorsudios. Built one site at a time.</div>
-    <div>nyxorog.webs@gmail.com</div>
+    <div>nyxorstudiosweb@gmail.com</div>
   </div>
 </footer>
 
