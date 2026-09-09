@@ -389,10 +389,12 @@
       <div class="section-head">let's talk</div>
       <h2>Have a project in mind?</h2>
       <p>Send a few details and I'll get back to you with next steps — usually within a day.</p>
-      <form onsubmit="event.preventDefault(); alert('Thanks — I\'ll get back to you soon.');">
-        <input type="text" placeholder="Your name" required>
-        <input type="email" placeholder="Your email" required>
-        <textarea placeholder="What do you need built?" required></textarea>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" placeholder="What do you need built?" required></textarea>
         <button type="submit">Send message</button>
         <div class="form-note">Or email directly — see footer below.</div>
       </form>
